@@ -17,7 +17,7 @@ This route sends a request to the backend to begin generating a zipfile of award
             The format of the file(s) in the zip file containing the data.
             + Default: `csv`
             + Members
-                + `csv`
+                + `csv` 
                 + `tsv`
                 + `pstxt`
         + `limit` (optional, number)
@@ -166,5 +166,5 @@ This route sends a request to the backend to begin generating a zipfile of award
 + `zip` (optional, string)
 
 ### NAICSCodeObject (object)
-+ `require`: [`33`] (optional, list[string])
-+ `exclude`: [`3313`] (optional, list[string])
++ `require`: [`33`] (optional, array[string])
++ `exclude`: [`3313`] (optional, array[string])
