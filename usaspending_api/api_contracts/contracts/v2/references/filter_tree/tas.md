@@ -34,7 +34,7 @@ Returns a list of toptier agencies that have at least one TAS affiliated with th
                         "id": "1",
                         "description": "Agency of Donald Trump",
                         "ancestors": [],
-                        "count": "100",
+                        "count": 100,
                         "children": null
                     },
                     {
@@ -132,13 +132,13 @@ Returns a list of federal accounts associated with the specified agency
                             "id": "11",
                             "description": "Federal Account of Donald Trump",
                             "ancestors": ["1"],
-                            "count": "100"
+                            "count": 100
                         },
                         {
                             "id": "12",
                             "description": "Federal Account of Donald Trump II",
                             "ancestors": ["1"],
-                            "count": "100"
+                            "count": 100
                         }
                 ]
             }
@@ -173,13 +173,13 @@ Returns a list of Treasury Account Symbols associated with the specified federal
                             "id": "1111",
                             "description": "Treasury Account of Donald Trump",
                             "ancestors": ["1", "12"],
-                            "count": "100"
+                            "count": 100
                         },
                         {
                             "id": "12211",
                             "description": "Treasury Account of Donald Trump II",
                             "ancestors": ["1", "12"],
-                            "count": "100"
+                            "count": 100
                         }
                 ]
             }
