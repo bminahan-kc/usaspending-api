@@ -147,9 +147,9 @@ class Command(BaseCommand):
             start_datetime = get_last_load_date()
             logger.info("Processing data for FABS starting from %s" % start_datetime)
 
-        with timer("obtaining delete records", logger.info):
-            delete_records = retrieve_deleted_fabs_transactions(start_datetime, end_datetime)
-            ids_to_delete = [item for sublist in delete_records.values() for item in sublist if item]
+            with timer("obtaining delete records", logger.info):
+                delete_records = retrieve_deleted_fabs_transactions(start_datetime, end_datetime)
+                ids_to_delete = [item for sublist in delete_records.values() for item in sublist if item]
 
         with timer("retrieving/diff-ing FABS Data", logger.info):
             ids_to_upsert = get_fabs_transaction_ids(afa_ids, start_datetime, end_datetime)
