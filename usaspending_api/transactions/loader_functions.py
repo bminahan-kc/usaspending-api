@@ -16,11 +16,15 @@ def store_ids_in_file(id_iter: List, file_name: str = "temp_file", is_numeric: b
         for id_string in id_iter:
             if not id_string:
                 continue
+
             total_ids += 1
+
             if is_numeric:
                 id_characters = regex(r"\d+", str(id_string)).group()
+
             elif isinstance(id_string, list):
                 id_characters = "\n".join([str(id) for id in id_string])
+                total_ids += len(id_string) - 1
             else:
                 id_characters = id_string
             f.writelines("{}\n".format(id_characters))

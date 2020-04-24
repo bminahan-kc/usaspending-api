@@ -154,7 +154,10 @@ class Command(BaseCommand):
         with timer("retrieving/diff-ing FABS Data", logger.info):
             ids_to_upsert = get_fabs_transaction_ids(afa_ids, start_datetime, end_datetime)
 
-        update_award_ids = delete_fabs_transactions(ids_to_delete)
+        update_award_ids = []
+        if is_incremental_load:
+            update_award_ids = delete_fabs_transactions(ids_to_delete)
+
         upsert_fabs_transactions(ids_to_upsert, update_award_ids)
 
         if is_incremental_load:
